@@ -60,6 +60,7 @@ def gemini_output(image_path, system_prompt, user_prompt):
     response = model.generate_content(input_prompt)
     return response.text
 
+st.header("ChatPDF")
 pdfs = []
 uploaded_file = st.sidebar.file_uploader("Upload your PDF File", type="pdf", accept_multiple_files=True)
 
