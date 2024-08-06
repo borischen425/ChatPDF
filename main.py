@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import os
 from pypdf import PdfMerger
-os.environ['GOOGLE_API_KEY'] = "AIzaSyBrJLyqsNaKjCvlnCPJREs-4tCW9LcxPaA"
+os.environ['GOOGLE_API_KEY'] = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 
 # Model Configuration
