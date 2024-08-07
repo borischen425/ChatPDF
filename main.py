@@ -66,7 +66,7 @@ uploaded_file = st.sidebar.file_uploader("Upload your PDF File", type="pdf", acc
 
 for i in range(len(uploaded_file)):
     pdfs.append(uploaded_file[i])
-if uploaded_file:
+if st.sidebar.button("Submit"):
     merger = PdfMerger()
     for pdf in pdfs:
         merger.append(pdf)
